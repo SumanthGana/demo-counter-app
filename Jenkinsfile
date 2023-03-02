@@ -1,6 +1,10 @@
 pipeline{
     
     agent any 
+    tools {
+    maven 'M3'
+  }
+    
     
     stages {
         
@@ -34,7 +38,7 @@ pipeline{
                 }
             }
         }*/
-        stage('Maven build'){
+        /*stage('Maven build'){
             
             steps{
                 
@@ -43,7 +47,11 @@ pipeline{
                     sh 'mvn clean package'
                 }
             }
-        }
+        }*/
+          stage('com'){
+    def mvnHome = tool name: 'Apache Maven 3.8.0', type: 'maven'
+    sh "${mvnHome}/bin/mvn -B -DskipTests clean package"
+  }
         /*stage('Static code analysis'){
             
             steps{
