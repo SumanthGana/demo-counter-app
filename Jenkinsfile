@@ -57,7 +57,7 @@ pipeline{
             }
         }
      
-  }
+  
         /*stage('Static code analysis'){
             
             steps{
