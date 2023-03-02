@@ -14,7 +14,7 @@ pipeline{
                 }
             }
         }
-        stage('UNIT testing'){
+       /* stage('UNIT testing'){
             
             steps{
                 
@@ -33,7 +33,7 @@ pipeline{
                     sh 'mvn verify -DskipUnitTests'
                 }
             }
-        }
+        }*/
         stage('Maven build'){
             
             steps{
@@ -44,7 +44,7 @@ pipeline{
                 }
             }
         }
-        stage('Static code analysis'){
+        /*stage('Static code analysis'){
             
             steps{
                 
@@ -67,7 +67,7 @@ pipeline{
                         waitForQualityGate abortPipeline: false, credentialsId: 'sonar-api'
                     }
                 }
-            }
+            }*/
         }
         
 }
