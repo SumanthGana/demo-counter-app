@@ -65,7 +65,7 @@ pipeline{
           stage('Docker Image Build'){
             steps{
                 script{
-                    sh 'docker build -t SumanthGana/demo-counter-app .'
+                    sh 'docker build -f SumanthGana/demo-counter-app .'
                    /* sh 'docker image tag $JOB_NAME:v1.$BUILD_ID sumanthgana/$JOB_NAME:v1.$BUILD_ID'
                     sh 'docker image tag $JOB_NAME:v1.$BUILD_ID sumanthgana/$JOB_NAME:latest'*/
           }
