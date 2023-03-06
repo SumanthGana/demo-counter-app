@@ -70,6 +70,6 @@ pipeline{
                     sh 'docker image tag $JOB_NAME:v1.$BUILD_ID sumanthgana/$JOB_NAME:latest'
           }
               }      
-     }*/
+     }
     }
 }
